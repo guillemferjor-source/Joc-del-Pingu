@@ -53,28 +53,7 @@ public class GestorJugador {
      * @param p1 primer pingüino
      * @param p2 segundo pingüino
      */
-    public void pinguinoGuerraQuema(Pinguino p1, Pinguino p2) {
-        Item b1item = p1.getInv().getItem(BolaDeNieve.class);
-        Item b2item = p2.getInv().getItem(BolaDeNieve.class);
-
-        int b1 = (b1item != null) ? b1item.getCantidad() : 0;
-        int b2 = (b2item != null) ? b2item.getCantidad() : 0;
-
-        // Ambos gastan todas sus bolas de nieve
-        if (b1item != null) p1.getInv().quitarItem(b1item);
-        if (b2item != null) p2.getInv().quitarItem(b2item);
-
-        int diferencia = b1 - b2;
-        if (diferencia > 0) {
-            // p1 gana, p2 retrocede
-            p2.moverPosicion(-diferencia);
-        } else if (diferencia < 0) {
-            // p2 gana, p1 retrocede
-            p1.moverPosicion(diferencia); // diferencia es negativo
-        }
-        // Si empate, ninguno retrocede
-    }
-
+   
     /**
      * Gestiona la interacción del pingüino con la foca.
      * Si tiene pez, la alimenta (bloqueo 2 turnos). Si no, la foca lo envía al forat anterior.
