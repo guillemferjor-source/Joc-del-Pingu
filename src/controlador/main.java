@@ -11,7 +11,7 @@ import vista.PantallaPartida;
  * En una implementació JavaFX aquest mètode llançaria la {@code Application}.
  * En mode consola, executa una partida de demostració completa.
  */
-public class main {
+public class Main {
 
     /**
      * Mètode principal.
@@ -49,7 +49,7 @@ public class main {
         Foca foca   = new Foca();
 
         // Ítems inicials d'exemple
-        j1.getInv().anadirItem(new BolaDenieve(2));
+        j1.getInv().anadirItem(new BolaDeNieve(2));
         j2.getInv().anadirItem(new Pez(1));
         j3.getInv().anadirItem(new Dado("Dado Normal", 1, 1, 6));
 
